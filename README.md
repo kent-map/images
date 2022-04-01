@@ -1,6 +1,6 @@
 # Kent Maps Images
 
-This repository contains image files and metadata used in by the [Kent Maps Online](https://kent-maps.online) web site
+This repository contains image files and metadata used by the [Kent Maps Online](https://kent-maps.online) web site
 
 The image files and metadata are used in the generation of [IIIF](https://iiif.io) manifests that are used by the [Juncture](https://juncture-digital.org) service that powers the Kent Maps site.
 
@@ -34,7 +34,8 @@ In situations where it is desired to associate richer metadata with an image a s
 
 ### Examples
 
-TODO
+The image [Dane_John_Park.jpg](Dane_John_Park.jpg) is accompanied with the [Dane_John_Park.yaml](Dane_John_Park.yaml) which includes a summary, date, and Wikidata QID (in the `depicts` metadata field).  The `depicts` metadata property can be used to indentify entities depicted in the image.  In this example the included Wikidata QID (Q16988443) indicates that the [Dane John Mound](https://en.wikipedia.org/wiki/Dane_John_Mound) is depicted in the image.
+The IIIF manifest for this image can be seen at [https://iiif.visual-essays.net/gh:kent-map/images/Dane_John_Park.jpg/manifest.json](https://iiif.visual-essays.net/gh:kent-map/images/Dane_John_Park/manifest.json).  The image can be viewed in the visual-essays.net image viewer at [https://iiif.visual-essays.net/gh:kent-map/images/Dane_John_Park](https://iiif.visual-essays.net/gh:kent-map/images/Dane_John_Park).
 
 ## 3) Properties file only
 
