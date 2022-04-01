@@ -35,7 +35,7 @@ In situations where it is desired to associate richer metadata with an image a s
 ### Examples
 
 The image [Dane_John_Park.jpg](Dane_John_Park.jpg) is accompanied with the [Dane_John_Park.yaml](Dane_John_Park.yaml) which includes a summary, date, and Wikidata QID (in the `depicts` metadata field).  The `depicts` metadata property can be used to indentify entities depicted in the image.  In this example the included Wikidata QID (Q16988443) indicates that the [Dane John Mound](https://en.wikipedia.org/wiki/Dane_John_Mound) is depicted in the image.
-The IIIF manifest for this image can be seen at [https://iiif.visual-essays.net/gh:kent-map/images/Dane_John_Park.jpg/manifest.json](https://iiif.visual-essays.net/gh:kent-map/images/Dane_John_Park/manifest.json).  The image can be viewed in the visual-essays.net image viewer at [https://iiif.visual-essays.net/gh:kent-map/images/Dane_John_Park](https://iiif.visual-essays.net/gh:kent-map/images/Dane_John_Park).
+The IIIF manifest for this image can be seen at [https://iiif.visual-essays.net/gh:kent-map/images/Dane_John_Park.jpg/manifest.json](https://iiif.visual-essays.net/gh:kent-map/images/Dane_John_Park/manifest.json).  The image can be viewed in the visual-essays.net image viewer at [https://iiif.visual-essays.net/gh:kent-map/images/Dane_John_Park.jpg](https://iiif.visual-essays.net/gh:kent-map/images/Dane_John_Park.jpg).
 
 ## 3) Properties file only
 
