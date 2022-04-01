@@ -6,7 +6,7 @@ The image files and metadata are used in the generation of [IIIF](https://iiif.i
 
 # The International Image Interoperability Framework (IIIF)
 
-IIIF is a set of open standards for delivering high-quality, attributed digital objects online at scale. It’s also an international community developing and implementing the IIIF APIs. IIIF is backed by a consortium of leading cultural institutions.
+[IIIF](https://iiif.io) is a set of open standards for delivering high-quality, attributed digital objects online at scale. It’s also an international community developing and implementing the IIIF APIs. IIIF is backed by a consortium of leading cultural institutions.
 
 The metadata in this repository are used to generate manifest files that are compliant with the [IIIF Presentation API 3.0](https://iiif.io/api/presentation/3.0/).  Detailed knowledge of IIIF is not needed to contribute or use images in this repository.
 
@@ -26,7 +26,7 @@ The reuse rights for an image is defined by appending a Creative Commons or Righ
 
 ### Examples
 
-TODO
+The image file [Fallstaff_Hotel_and_Westgate_Towers,_Canterbury-CC0.jpg](Fallstaff_Hotel_and_Westgate_Towers,_Canterbury-CC0.jpg) would a IIIF manifest that can be accessed via the URL [https://iiif.visual-essays/gh:kent-map/images/Fallstaff_Hotel_and_Westgate_Towers,_Canterbury-CC0.jpg/manifest.json](https://iiif.visual-essays/gh:kent-map/images/Fallstaff_Hotel_and_Westgate_Towers,_Canterbury-CC0.jpg).  This manifest can then be used in any IIIF viewer to view the image.  For instance, [https://iiif.visual-essays/gh:kent-map/images/Fallstaff_Hotel_and_Westgate_Towers,_Canterbury-CC0.jpg/manifest.json].
 
 ## 2) Image and properties file
 
