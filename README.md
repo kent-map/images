@@ -10,19 +10,25 @@ The image files and metadata are used in the generation of [IIIF](https://iiif.i
 
 The metadata in this repository are used to generate manifest files that are compliant with the [IIIF Presentation API 3.0](https://iiif.io/api/presentation/3.0/).  Detailed knowledge of IIIF is not needed to contribute or use images in this repository.
 
+# Using Github as an IIIF Image Repository
+
+This document describes an experimental approach for hosting IIIF images in a Github repository.  In this approach image and IIIF properties files are stored in a Github repository and served by an external service that dynamically generates IIIF presentation manifests and serves IIIF image tiles from the Github content.
+
+Where possible, users are encouraged to use a purpose-built image sharing site for hosting and sharing image files.  [Wikimedia Commons](https://commons.wikimedia.org/wiki/Main_Page) is one such (free-to-use) site for hosting and sharing media files.  While Wikimedia Commons (and some other file sharing sites) do not yet support IIIF, the same service that is used to generate IIIF manifests and serve images from Github repositories also works with many of these sites.  The advantage of using images from a site like Wikimedia Commons is that IIIF manifests can be automatically generated using metadata obtained from Application Programming Interfaces (APIs) provided by the sites.  As an example, an IIIF manifest for the [https://commons.wikimedia.org/wiki/File:White-cheeked_Honeyeater_-_Maddens_Plains.jpg](https://commons.wikimedia.org/wiki/File:White-cheeked_Honeyeater_-_Maddens_Plains.jpg) image hosted by Wikimedia Commons is automatically generated using the URL [https://iiif.visual-essays.net/wc:White-cheeked_Honeyeater_-_Maddens_Plains.jpg/manifest.json](https://iiif.visual-essays.net/wc:White-cheeked_Honeyeater_-_Maddens_Plains.jpg/manifest.json).  Using the auo-generated IIIF manifest the image can easily be viewed in an IIIF compatible viewer or used by any IIIF-enabled tool.  The White-cheeked Honeyeater image can be seen in the iiif.visual-essays.net image viewer at [https://iiif.visual-essays.net/wc:White-cheeked_Honeyeater_-_Maddens_Plains.jpg](https://iiif.visual-essays.net/wc:White-cheeked_Honeyeater_-_Maddens_Plains.jpg)
+
 In many cases a minimal set of IIIF required metadata for a single image can be inferred from site-wide default values and image-specific metadata that can be inferred from the image file name (such as the image title and reuse rights).
 
 In situations where more descriptive metadata is needed a simple key-value properties file can be associated with a single image or a group of images located in a folder.
 
 # Options for image and/or metadata hosting
 
-## 1) Image only
+## Image only
 
 The easiest method for hosting a file is to simply upload the image file in this repository using a file name that can be used to generate the image label (caption) and can optionally includes a reuse rights code.
 
 When using this method the image file name represents the image label and an optional segment that consists of a reuse rights code.  The label and rights code segments are separated by the first `-` character in the file name.  All spaces in the label segment of the file name must be converted to underscore (`_`) characters.  A double underscore (`__`) can be used to signify the end of a title.  This can be useful if multiple images in a folder will use the same label.  For instance, `Some_label__1-CC0.jpg` and `Some_label__2-CC0.jpg`.  In this example both image files have a unique file name but can be associated with the same label and rights code.
 
-The reuse rights for an image is defined by appending a Creative Commons or Rights Statements code to the end of the file name (but before the file extension).  The reuse rights code is one of the [Creative Commons](https://creativecommons.org/licenses/) or [RightsStatements.org](https://rightsstatements.org/page/1.0/) codes defined in [Reuse Rights](#reuse-rights) section below.  If a rights code is not provided in the file name a default value is used.  The default value is obtained from properties files found in the folder heirarchy in which the image file is located.  If rights metadata is available in multiple properties files the value in the file that is closest to the image takes precedence.  For instance, if a properties file at the root of the repository defined the reuse rights as `CC BY` and then another properties file in a parent/ancestor folder of the image defined the reuse rights as `CC BY-SA`, the `CC BY SA` value would take precedence and would be used in the generated IIIF manifest.
+The reuse rights for an image is defined by appending a Creative Commons or Rights Statements code to the end of the file name (but before the file extension).  The reuse rights code is one of the [Creative Commons](https://creativecommons.org/licenses/) or [RightsStatements.org](https://rightsstatements.org/page/1.0/) codes defined in [Reuse Rights](#reuse-rights) section below.  If a rights code is not provided in the file name a default value is used.  The default value is obtained from properties files found in the folder hierarchy in which the image file is located.  If rights metadata is available in multiple properties files the value in the file that is closest to the image takes precedence.  For instance, if a properties file at the root of the repository defined the reuse rights as `CC BY` and then another properties file in a parent/ancestor folder of the image defined the reuse rights as `CC BY-SA`, the `CC BY SA` value would take precedence and would be used in the generated IIIF manifest.
 
 ### Examples
 
@@ -30,19 +36,19 @@ The reuse rights for an image is defined by appending a Creative Commons or Righ
   - The IIIF manifest generated for this image can be seen at [https://iiif.visual-essays.net/gh:kent-map/images/Fallstaff_Hotel_and_Westgate_Towers,_Canterbury-CC0.jpg/manifest.json](https://iiif.visual-essays.net/gh:kent-map/images/Fallstaff_Hotel_and_Westgate_Towers,_Canterbury-CC0.jpg/manifest.json).
   - This manifest can then be used in any IIIF viewer to view the image.  For instance, using the iiif.visual-essays.net viewer [https://iiif.visual-essays.net/gh:kent-map/images/Fallstaff_Hotel_and_Westgate_Towers,_Canterbury-CC0.jpg](https://iiif.visual-essays.net/gh:kent-map/images/Fallstaff_Hotel_and_Westgate_Towers,_Canterbury-CC0.jpg).
 
-## 2) Image and properties file
+## Image and properties file
 
 In situations where it is desired to associate richer metadata with an image a supplemental properties file may be used.
 
 ### Examples
 
-- The image [Dane_John_Park.jpg](Dane_John_Park.jpg) is accompanied with the [Dane_John_Park.yaml](Dane_John_Park.yaml) proprties file which includes a summary, date, and Wikidata QID (in the `depicts` metadata field).
+- The image [Dane_John_Park.jpg](Dane_John_Park.jpg) is accompanied with the [Dane_John_Park.yaml](Dane_John_Park.yaml) properties file which includes a summary, date, and Wikidata QID (in the `depicts` metadata field).
   - The IIIF manifest for this image can be seen at [https://iiif.visual-essays.net/gh:kent-map/images/Dane_John_Park.jpg/manifest.json](https://iiif.visual-essays.net/gh:kent-map/images/Dane_John_Park/manifest.json).
   - The image can be viewed in the iiif.visual-essays.net image viewer at [https://iiif.visual-essays.net/gh:kent-map/images/Dane_John_Park.jpg](https://iiif.visual-essays.net/gh:kent-map/images/Dane_John_Park.jpg).
 
 > Where possible, it is recommended to include the `depicts` metadata property to identify entities depicted in the image.  In this example the included Wikidata QID ([Q16988443](https://www.wikidata.org/wiki/Q16988443)) indicates that the [Dane John Mound](https://en.wikipedia.org/wiki/Dane_John_Mound) is depicted in the image.
 
-## 3) Properties file only
+## Properties file only
 
 In situations where an image is hosted on another web site that does not provide a IIIF manifest a properties file is used to define the IIIF metadata in a generated IIIF manifest.  When using this method the URL to the externally hosted image is included in the properties file in addition to the usual IIIF metadata properties.
 
@@ -90,9 +96,9 @@ The IIIF Presentation Manifests provide a flexible approach for explicitly defin
 
 ## Using a file naming convention
 
-The easiest method for defining the rights for an image hosted in Github is to append a Creative Commons or Rights Statements code to the end (but before the file extension) of the Gihub file name.  The naming convention recognized by the Visual Essays IIIF manifest generator splits the file name into two segments.  The segments are separated by the first `-` found in the file name.  The first segment is the image label (or caption) and the second is the rights code.  The rights code is one of the Creative Commons or RightsStatements.org codes defined in the section above.
+The easiest method for defining the rights for an image hosted in Github is to append a Creative Commons or Rights Statements code to the end (but before the file extension) of the Github file name.  The naming convention recognized by the Visual Essays IIIF manifest generator splits the file name into two segments.  The segments are separated by the first `-` found in the file name.  The first segment is the image label (or caption) and the second is the rights code.  The rights code is one of the Creative Commons or RightsStatements.org codes defined in the section above.
 
-The text before the first `-` character in the file name is used to create the image label/caption unless this is overridden by a label property in an image-specific properties (`.yaml`) file.  When using the first segment from the file name for the label, any underscore (`_`) charcters are converted to spaces.  A double underscore (`__`) can be used to signify the end of a title.  This can be useful if multiple images in a folder will use the same label.  For instance, `Some_label__1-CC0.jpg` and `Some_label__2-CC0.jpg`.  In this example both image files have a unique file name but can be associated with the same label and rights code.
+The text before the first `-` character in the file name is used to create the image label/caption unless this is overridden by a label property in an image-specific properties (`.yaml`) file.  When using the first segment from the file name for the label, any underscore (`_`) characters are converted to spaces.  A double underscore (`__`) can be used to signify the end of a title.  This can be useful if multiple images in a folder will use the same label.  For instance, `Some_label__1-CC0.jpg` and `Some_label__2-CC0.jpg`.  In this example both image files have a unique file name but can be associated with the same label and rights code.
 
 ## Using metadata files
 
@@ -100,7 +106,7 @@ An alternative to adding the rights code to the file name is to associate a meta
 
 ### Associating metadata with a single image
 
-Metadata can be associated with a single image by creating a `.yaml` file with the same root file name as the image but with the `.yaml` extension instead of the image extenstion (typically `.jpg` or `.png`).  For instance, to associate a metadata file with the image named `Fiordo_de_Furore.jpg` the file `Fiordo_de_Furore.yaml` would be created in the same directory. 
+Metadata can be associated with a single image by creating a `.yaml` file with the same root file name as the image but with the `.yaml` extension instead of the image extension (typically `.jpg` or `.png`).  For instance, to associate a metadata file with the image named `Fiordo_de_Furore.jpg` the file `Fiordo_de_Furore.yaml` would be created in the same directory. 
 
 ### Associating metadata with multiple images
 
