@@ -11,14 +11,16 @@
     [v-cloak] {display: none}
     * {box-sizing: border-box;}
     body {margin: 0; font-family: Roboto, sans-serif;}
-    .name {margin-right:12px;}    
+    .name {margin-right:12px; cursor:pointer;}    
+    .name:hover {font-weight:bold;}    
   </style>
 </head>
 <body>
 
   <div id="app">
       <div v-for="item, idx in dirList" :key="item.name">
-        <span class="name" v-html="item.name"></span><span class="type" v-html="item.type"></span>
+        <span class="name" v-html="item.name" @click="getManifest(item)">
+        </span><span class="type" v-html="item.type"></span>
       </div>
   </div>
 
@@ -38,21 +40,27 @@
   <script>
   
   const api = 'https://api.juncture-digital.org'
+  const iiifServer = 'https://iiif.visual-essays.net'
 
   new Vue({
     el: '#app',
     data: () => ({
       ghAcct: 'kent-map',
       ghRepo: 'images',
-      path: '/',
+      root: '/',
       dirList: []
     }),
     computed: {},
     created() {},
     async mounted() {
-      this.dirList = await fetch(`${api}/dir/${this.ghAcct}/${this.ghRepo}/`).then(resp => resp.json())
+      this.dirList = await fetch(`${api}/dir/${this.ghAcct}/${this.ghRepo}${this.root}`).then(resp => resp.json())
     },
-    methods: {},
+    methods: {
+      getManifest(item) {
+        fetch(`${iiifServer}/gh:${this.ghAcct}/${this.ghRepo}${this.root == '/' ? '' : this.root}/${item.name}/manifest.json`).then(resp => resp.json())
+        .then(manifest => console.log(manifest))
+      }
+    },
     watch: {}
   })
   Vue.config.productionTip = false
