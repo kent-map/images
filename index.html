@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+  <title>Image Browser</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
+  <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    [v-cloak] {display: none}
+    * {box-sizing: border-box;}
+    body {margin: 0; font-family: Roboto, sans-serif;}
+    .name {margin-right:12px; cursor:pointer;}    
+    .name:hover {font-weight:bold;}    
+  </style>
+</head>
+<body>
+
+  <div id="app">
+      <div v-for="item, idx in dirList" :key="item.name">
+        <span class="name" v-html="item.name" @click="getManifest(item)">
+        </span><span class="type" v-html="item.type"></span>
+      </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>
+  
+  <!-- This is used for deep linking of Single Page Apps when hosted with GitHub Pages -->
+  <script type="text/javascript">
+    (function(l) {
+      if (l.search[1] === '/' ) {
+        let decoded = l.search.slice(1).split('&').map(s => s.replace(/~and~/g, '&')).join('?')
+        window.history.replaceState(null, null, l.pathname.slice(0, -1) + decoded + l.hash)
+      }
+    }(window.location))
+  </script>
+
+  <script>
+  
+  const api = 'https://api.juncture-digital.org'
+  const iiifServer = 'https://iiif.visual-essays.net'
+
+  new Vue({
+    el: '#app',
+    data: () => ({
+      ghAcct: 'kent-map',
+      ghRepo: 'images',
+      root: '/',
+      dirList: []
+    }),
+    computed: {},
+    created() {},
+    async mounted() {
+      this.dirList = await fetch(`${api}/dir/${this.ghAcct}/${this.ghRepo}${this.root}`).then(resp => resp.json())
+    },
+    methods: {
+      getManifest(item) {
+        fetch(`${iiifServer}/gh:${this.ghAcct}/${this.ghRepo}${this.root == '/' ? '' : this.root}/${item.name}/manifest.json`).then(resp => resp.json())
+        .then(manifest => console.log(manifest))
+      }
+    },
+    watch: {}
+  })
+  Vue.config.productionTip = false
+  Vue.config.devtools = true
+
+  </script>
+
+</body>
+</html>
