@@ -1,0 +1,59 @@
+sl-tooltip {
+    --max-width: 2000px;
+}
+
+#dirs {
+    margin-bottom: 5px;
+}
+
+.dir {
+    height: 45px;
+}
+
+.dir, .otherFile {
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 5px;
+}
+
+.otherFile {
+    margin-right: 15px;
+}
+
+body {
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+#iiifs {
+    display: grid;
+    width: 96%;
+    grid-template-columns: repeat(4, 25%);
+    grid-gap: 15px;
+}
+
+.iiif {
+    background-color: black;
+    border-radius: 4px;
+    text-align: center;
+    vertical-align: middle;
+    height: 250px;
+}
+
+.iiif > sl-tooltip > img {
+    max-width: 100%;
+    height: 250px;
+    border-radius: 4px;
+    object-fit: contain;
+}
+
+.iiif > sl-tooltip > sl-icon {
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+.iiif > sl-tooltip > img:active {
+    -webkit-filter: brightness(0.5);
+    filter: brightness(0.5);
+}
