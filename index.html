@@ -40,7 +40,7 @@
       <div id = "iiifs">
         <div class = "iiif" v-for = "iiif in iiifs">
           <sl-tooltip v-bind:content = "getImageTooltip(iiif.image)" >
-            <img :src="manifests[iiif.image.name]?.thumbnail[0].id" v-on:click = "copyManifest(iiif)"  v-if = "iiif.image != undefined"/> 
+            <img v-if="iiif.image && manifests[iiif.image.name]" :src="manifests[iiif.image.name]?.thumbnail[0].id" v-on:click = "copyManifest(iiif)"  v-if = "iiif.image != undefined"/> 
             <sl-icon name = "question" v-if = "iiif.image == undefined"></sl-icon>
           </sl-tooltip>
         </div>
