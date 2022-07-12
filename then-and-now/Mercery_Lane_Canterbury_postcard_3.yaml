@@ -1,6 +1,6 @@
 image_url: https://stor.artstor.org/stor/ed3cf157-603f-4f9c-ac67-b8a9231753a2
 summary: Mercery Lane, Canterbury
 requiredStatement:
-. label: attribution
+  label: attribution
   value: postcard
 navDate: 1905

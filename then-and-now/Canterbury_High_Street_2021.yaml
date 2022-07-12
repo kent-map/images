@@ -2,7 +2,7 @@ image_url: https://stor.artstor.org/stor/10970784-2155-498d-8b05-d8586b1f67d0
 label: High Street, Canterbury (2021)
 summary: Picture of Canterbury High Street in 2021
 requiredStatement:
-. label: attribution
+  label: attribution
   value: Image provided by Calum Elliot and Emma Molford
 navDate: 2021
 depicts: Q29303

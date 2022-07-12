@@ -1,5 +1,5 @@
 image_url: https://stor.artstor.org/stor/cca67b7f-61d3-42b7-aa37-8686791a820b
 summary: High Street, Canterbury
 requiredStatement:
-. label: attribution
+  label: attribution
   value: postcard
