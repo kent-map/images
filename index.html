@@ -95,7 +95,7 @@
     },
     methods: {
       getManifest(item) {
-        let manifestUrl = `${iiifServer}/gh:${this.ghAcct}/${this.ghRepo}${this.path}${item.name}/manifest.json`
+        let manifestUrl = `${iiifServer}/gh:${this.ghAcct}/${this.ghRepo}${this.path}${encodeURIComponent(item.name)}/manifest.json`
         console.log(item, this.root, this.path, manifestUrl)
         fetch(manifestUrl).then(resp => resp.json())
         .then(manifest => {
