@@ -5,7 +5,7 @@ requiredStatement:
   value: Image provided by the <a href="https://kent-maps.online/about/">Kent Maps Project</a>
 provider:
 - id: https://kent-maps.online/about/
-label: Kent Maps Project
+  label: Kent Maps Project
   homepage:
   - id: https://kent-maps.online
-  label: Kent Maps Online
+    label: Kent Maps Online
