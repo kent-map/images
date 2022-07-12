@@ -40,8 +40,8 @@
       <div id = "iiifs">
         <div class = "iiif" v-for = "iiif in iiifs">
           <sl-tooltip v-bind:content = "getImageTooltip(iiif.image)" >
-            <img v-if="iiif.image && manifests[iiif.image.name]" :src="manifests[iiif.image.name]?.thumbnail[0].id" v-on:click = "copyManifest(iiif)"  v-if = "iiif.image != undefined"/> 
-            <sl-icon name = "question" v-if = "iiif.image == undefined"></sl-icon>
+            <img v-if="(iiif.image || iiif.yaml) && manifests[iiif.image?.name || iiif.yaml?.name]" :src="manifests[iiif.image?.name || iiif.yaml?.name].thumbnail[0].id" v-on:click = "copyManifest(iiif)"  v-if = "iiif.image != undefined"/> 
+            <sl-icon name = "question" v-else></sl-icon>
           </sl-tooltip>
         </div>
       </div>
@@ -96,13 +96,11 @@
     methods: {
       getManifest(item) {
         let manifestUrl = `${iiifServer}/gh:${this.ghAcct}/${this.ghRepo}${this.path}${encodeURIComponent(item.name)}/manifest.json`
-        console.log(item, this.root, this.path, manifestUrl)
         fetch(manifestUrl).then(resp => resp.json())
         .then(manifest => {
           let updated = {...this.manifests}
           updated[item.name] = manifest
           this.manifests = updated
-          console.log(this.manifests)
         })
       },
 
@@ -152,6 +150,7 @@
             }
           }
         }
+        console.log(this.iiifs)
 
       },
 
