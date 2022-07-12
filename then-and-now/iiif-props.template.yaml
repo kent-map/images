@@ -1,6 +1,6 @@
 language: 2-digit language code
 source: image url
-label: image label or caption 
+  label: image label or caption 
 summary: image description
 navDate: date
 provider:

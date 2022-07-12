@@ -1,3 +1,3 @@
-requiredStatement
-label: attribution
-value: George. Cruikshank (the original illustrator of _Oliver Twist_.)
+requiredStatement:
+  label: attribution
+  value: George. Cruikshank (the original illustrator of _Oliver Twist_.)
