@@ -150,7 +150,6 @@
             }
           }
         }
-        console.log(this.iiifs)
 
       },
 
@@ -207,13 +206,6 @@
         }
 
         return displayPath + ":";
-      },
-
-      // Used in <img> tag
-      getImageSrc(image) {
-        `https://iiif.visual-essays.net/gh:kent-map/images${this.path}/${image.name}/full/150,/0/default.jpg`;
-        let manifest = fetch(`https://iiif.juncture-digital.org/gh:kent-map/images${this.path}/${image.name}/manifest.json`).then(resp => resp.json())
-        .then(manifest => this.thumbnails[image.name] = manifest.thumbnail[0].id)
       },
 
       // A more user-readable image path
