@@ -1,7 +1,7 @@
 image_url: https://stor.artstor.org/stor/e2e1984f-d879-44cc-88d9-f4770341225a
 summary: Canterbury
 requiredStatement:
-  label: attribution
+. label: attribution
   value: postcard
 navDate: 1905
 depicts: Q16988443

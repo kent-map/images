@@ -1,11 +1,11 @@
 summary: Image for Kent Maps Project
 rights: http://creativecommons.org/licenses/by/4.0/
 requiredStatement:
-  label: attribution
+. label: attribution
   value: Image provided by the <a href="https://kent-maps.online/about/">Kent Maps Project</a>
 provider:
 - id: https://kent-maps.online/about/
-  label: Kent Maps Project
+label: Kent Maps Project
   homepage:
   - id: https://kent-maps.online
-    label: Kent Maps Online
+  label: Kent Maps Online
