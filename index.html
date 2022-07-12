@@ -40,7 +40,7 @@
       <div id = "iiifs">
         <div class = "iiif" v-for = "iiif in iiifs">
           <sl-tooltip v-bind:content = "getImageTooltip(iiif.image)" >
-            <img v-bind:src = "getImageSrc(iiif.image)" v-on:click = "copyManifest(iiif)"  v-if = "iiif.image != undefined"/> 
+            <img :src="manifests[iiif.image.name]?.thumbnail[0].id" v-on:click = "copyManifest(iiif)"  v-if = "iiif.image != undefined"/> 
             <sl-icon name = "question" v-if = "iiif.image == undefined"></sl-icon>
           </sl-tooltip>
         </div>
@@ -72,7 +72,7 @@
   <script>
   
   const api = 'https://api.juncture-digital.org'
-  const iiifServer = 'https://iiif.visual-essays.net'
+  const iiifServer = 'https://iiif.juncture-digital.org'
 
   new Vue({
     el: '#app',
@@ -85,17 +85,25 @@
       dirList: [],
       iiifs: {},
       otherFiles: [],
-      dirs: []
+      dirs: [],
+      manifests: {}
     }),
     computed: {},
     created() {},
     async mounted() {
-      this.getFilesAndDirs();
+      this.getFilesAndDirs()
     },
     methods: {
       getManifest(item) {
-        fetch(`${iiifServer}/gh:${this.ghAcct}/${this.ghRepo}${this.root == '/' ? '' : this.root}/${item.name}/manifest.json`).then(resp => resp.json())
-        .then(manifest => console.log(manifest))
+        let manifestUrl = `${iiifServer}/gh:${this.ghAcct}/${this.ghRepo}${this.path}${item.name}/manifest.json`
+        console.log(item, this.root, this.path, manifestUrl)
+        fetch(manifestUrl).then(resp => resp.json())
+        .then(manifest => {
+          let updated = {...this.manifests}
+          updated[item.name] = manifest
+          this.manifests = updated
+          console.log(this.manifests)
+        })
       },
 
       // Gets all files and directories in current directory
@@ -128,12 +136,14 @@
             if (fileExtension == "yaml") {
               this.iiifs[fileName] = this.createDictionaryIfUndefined(this.iiifs[fileName]);
               this.iiifs[fileName].yaml = item;
+              this.getManifest(item)
             }
 
              // If file is an image file add it to IIIF dictionary
             else if ((fileExtension == "png") || (fileExtension == "jpg") || (fileExtension == "jpeg")) {
               this.iiifs[fileName] = this.createDictionaryIfUndefined(this.iiifs[fileName]);
               this.iiifs[fileName].image = item;
+              this.getManifest(item)
             }
 
             // If file is not a YAML or image file, add it to a list of other files
@@ -142,6 +152,7 @@
             }
           }
         }
+
       },
 
       // Splits file into file name and file extension
@@ -201,7 +212,9 @@
 
       // Used in <img> tag
       getImageSrc(image) {
-        return `https://iiif.visual-essays.net/gh:kent-map/images${this.path}/${image.name}/full/150,/0/default.jpg`;
+        `https://iiif.visual-essays.net/gh:kent-map/images${this.path}/${image.name}/full/150,/0/default.jpg`;
+        let manifest = fetch(`https://iiif.juncture-digital.org/gh:kent-map/images${this.path}/${image.name}/manifest.json`).then(resp => resp.json())
+        .then(manifest => this.thumbnails[image.name] = manifest.thumbnail[0].id)
       },
 
       // A more user-readable image path
