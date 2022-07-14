@@ -98,7 +98,7 @@
     methods: {
       manifestUrl(item) {
         let url = `${iiifServer}/gh:${this.ghAcct}/${this.ghRepo}${this.path}${encodeURIComponent(item.name.split('.').slice(0,-1).join('.'))}/manifest.json`
-        console.log(url)
+        // console.log(url)
         return url
       },
       getManifest(item) {
@@ -138,18 +138,14 @@
 
             // If file is a YAML file add it to IIIF dictionary
             if (fileExtension == "yaml") {
-              fileName = fileName.split('.').slice(0,-1).join('.')
               this.iiifs[fileName] = this.createDictionaryIfUndefined(this.iiifs[fileName]);
               this.iiifs[fileName].yaml = item;
-              if (!ignore.has(item.name)) this.getManifest(item)
             }
 
              // If file is an image file add it to IIIF dictionary
             else if ((fileExtension == "png") || (fileExtension == "jpg") || (fileExtension == "jpeg")) {
-              fileName = fileName.split('.').slice(0,-1).join('.')
               this.iiifs[fileName] = this.createDictionaryIfUndefined(this.iiifs[fileName]);
               this.iiifs[fileName].image = item;
-              if (!ignore.has(item.name)) this.getManifest(item)
             }
 
             // If file is not a YAML or image file, add it to a list of other files
@@ -158,6 +154,10 @@
             }
           }
         }
+        Object.values(this.iiifs).forEach(iiif => {
+          let item = iiif.image || iiif.yaml
+          if (!ignore.has(item.name)) this.getManifest(item)
+        })
 
       },
 
@@ -245,6 +245,7 @@
           navigator.clipboard.writeText(manifest);
         }
 
+        console.log(iiif)
         this.openManifestViewer(`https://iiif.juncture-digital.org#${this.manifestUrl(iiif.image || iiif.yaml)}`)
 
       },
