@@ -1,5 +1,6 @@
 <style>
   h1 { margin-bottom: 64px; }
+	.section2 {margin-top:32px; clear: both; min-height:550px;}
 </style>
 
 # Georeferenced Maps
