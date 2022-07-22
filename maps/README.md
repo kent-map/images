@@ -45,7 +45,7 @@
 
 .ve-map 51.16,0.89 9.4  class=sticky
 
-- Allmaps ID: ``
+- Allmaps ID: `0d13de43a9570166`
 - Manifest: [https://iiif.juncture-digital.org/gh:kent-map/images/maps/1820_map_of_Kent_EK_U133_image/manifest.json](https://iiif.juncture-digital.org/gh:kent-map/images/maps/1820_map_of_Kent_EK_U133_image/manifest.json)
 - Manifest (v2): [https://iiif.juncture-digital.org/iiif/2/gh:kent-map/images/maps/1820_map_of_Kent_EK_U133_image/manifest.json](https://iiif.juncture-digital.org/iiif/2/gh:kent-map/images/maps/1820_map_of_Kent_EK_U133_image/manifest.json)
 
