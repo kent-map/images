@@ -84,13 +84,13 @@
 
 .ve-map 51.16,0.89 9.4  class=sticky
 
-- Allmaps ID: ``
+- Allmaps ID: `d8938ce88f3b83e4`
 - Manifest: [https://iiif.juncture-digital.org/gh:kent-map/images/maps/Kent_Ordnance_Survey_1863/manifest.json](https://iiif.juncture-digital.org/gh:kent-map/images/maps/Kent_Ordnance_Survey_1863/manifest.json)
 - Manifest (v2): [https://iiif.juncture-digital.org/iiif/2/gh:kent-map/images/maps/Kent_Ordnance_Survey_1863/manifest.json](https://iiif.juncture-digital.org/iiif/2/gh:kent-map/images/maps/Kent_Ordnance_Survey_1863/manifest.json)
 
 ```html
 <param ve-map center="51.16,0.89" zoom="10">
-<param ve-map-layer active allmaps allmaps-id="" title="Kent Ordnance Survey 1863">
+<param ve-map-layer active allmaps allmaps-id="d8938ce88f3b83e4" title="Kent Ordnance Survey 1863">
 ```
 
 ## Maidstone
