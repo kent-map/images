@@ -51,7 +51,7 @@
 
 ```html
 <param ve-map center="51.16,0.89" zoom="10">
-<param ve-map-layer active allmaps allmaps-id="" title="1820 map of Kent">
+<param ve-map-layer active allmaps allmaps-id="0d13de43a9570166" title="1820 map of Kent">
 ```
 
 ## Dickens Rochester Chatham
@@ -64,7 +64,7 @@
 
 ```html
 <param ve-map center="51.16,0.89" zoom="10">
-<param ve-map-layer active allmaps allmaps-id="" title="Dickens Rochester Chatham">
+<param ve-map-layer active allmaps allmaps-id="8f53f4fc320b9950" title="Dickens Rochester Chatham">
 ```
 
 ## Dickens Rochester Chatham with legend
@@ -77,7 +77,7 @@
 
 ```html
 <param ve-map center="51.16,0.89" zoom="10">
-<param ve-map-layer active allmaps allmaps-id="" title="1820 map of Kent">
+<param ve-map-layer active allmaps allmaps-id="8d73d175d66162c5" title="1820 map of Kent">
 ```
 
 ## Kent Ordnance Survey 1863
