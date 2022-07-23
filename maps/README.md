@@ -58,7 +58,7 @@
 
 .ve-map 51.16,0.89 9.4  class=sticky
 
-- Allmaps ID: ``
+- Allmaps ID: `8f53f4fc320b9950`
 - Manifest: [https://iiif.juncture-digital.org/gh:kent-map/images/maps/Dickens_Rochester_Chatham/manifest.json](https://iiif.juncture-digital.org/gh:kent-map/images/maps/Dickens_Rochester_Chatham/manifest.json)
 - Manifest (v2): [https://iiif.juncture-digital.org/iiif/2/gh:kent-map/images/maps/Dickens_Rochester_Chatham/manifest.json](https://iiif.juncture-digital.org/iiif/2/gh:kent-map/images/maps/Dickens_Rochester_Chatham/manifest.json)
 
