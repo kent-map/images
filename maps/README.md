@@ -28,7 +28,7 @@
 .ve-map 51.16,0.89 10 d93beb8a7cb608af
 ```
 
-## Kent Ordnance Survey 1822
+## Kent Ordinance Survey 1822
 
 .ve-map 51.16,0.89 9.4 a674cc941b6c08cf class=sticky
 
