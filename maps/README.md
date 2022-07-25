@@ -97,13 +97,13 @@
 
 .ve-map 51.16,0.89 9.4  class=sticky
 
-- Allmaps ID: ``
+- Allmaps ID: `b2110ae26f0aafa7`
 - Manifest: [https://iiif.juncture-digital.org/gh:kent-map/images/maps/Maidstone/manifest.json](https://iiif.juncture-digital.org/gh:kent-map/images/maps/Maidstone/manifest.json)
 - Manifest (v2): [https://iiif.juncture-digital.org/iiif/2/gh:kent-map/images/maps/Maidstone/manifest.json](https://iiif.juncture-digital.org/iiif/2/gh:kent-map/images/maps/Maidstone/manifest.json)
 
 ```html
 <param ve-map center="51.16,0.89" zoom="10">
-<param ve-map-layer active allmaps allmaps-id="" title="Maidstone">
+<param ve-map-layer active allmaps allmaps-id="b2110ae26f0aafa7" title="Maidstone">
 ```
 
 ## Map of British Isles (1862)
