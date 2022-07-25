@@ -123,13 +123,13 @@
 
 .ve-map 51.16,0.89 9.4  class=sticky
 
-- Allmaps ID: ``
+- Allmaps ID: `d440d662a243988c`
 - Manifest: [https://iiif.juncture-digital.org/gh:kent-map/images/maps/Rochester_Ordnance_Survey_1968/manifest.json](https://iiif.juncture-digital.org/gh:kent-map/images/maps/Rochester_Ordnance_Survey_1968/manifest.json)
 - Manifest (v2): [https://iiif.juncture-digital.org/iiif/2/gh:kent-map/images/maps/Rochester_Ordnance_Survey_1968/manifest.json](https://iiif.juncture-digital.org/iiif/2/gh:kent-map/images/maps/Rochester_Ordnance_Survey_1968/manifest.json)
 
 ```html
 <param ve-map center="51.16,0.89" zoom="10">
-<param ve-map-layer active allmaps allmaps-id="" title="Rochester Ordnance Survey 1968">
+<param ve-map-layer active allmaps allmaps-id="d440d662a243988c" title="Rochester Ordnance Survey 1968">
 ```
 
 ## The watering places of Kent
