@@ -108,7 +108,7 @@
 
 ## Map of British Isles (1862)
 
-.ve-map 51.16,0.89 9.4 b2110ae26f0aafa7 class=sticky
+.ve-map 51.16,0.89 9.4 f5a832fdc80c33c4 class=sticky
 
 - Allmaps ID: `f5a832fdc80c33c4`
 - Manifest: [https://iiif.juncture-digital.org/gh:kent-map/images/maps/Map_of_British_Isles_(1862)/manifest.json](https://iiif.juncture-digital.org/gh:kent-map/images/maps/Map_of_British_Isles_(1862)/manifest.json)
