@@ -43,7 +43,7 @@
 
 ## 1820 map of Kent EK U133 image
 
-.ve-map 51.16,0.89 9.4  class=sticky
+.ve-map 51.16,0.89 9.4 0d13de43a9570166 class=sticky
 
 - Allmaps ID: `0d13de43a9570166`
 - Manifest: [https://iiif.juncture-digital.org/gh:kent-map/images/maps/1820_map_of_Kent_EK_U133_image/manifest.json](https://iiif.juncture-digital.org/gh:kent-map/images/maps/1820_map_of_Kent_EK_U133_image/manifest.json)
@@ -56,7 +56,7 @@
 
 ## Dickens Rochester Chatham
 
-.ve-map 51.16,0.89 9.4  class=sticky
+.ve-map 51.16,0.89 9.4 8f53f4fc320b9950 class=sticky
 
 - Allmaps ID: `8f53f4fc320b9950`
 - Manifest: [https://iiif.juncture-digital.org/gh:kent-map/images/maps/Dickens_Rochester_Chatham/manifest.json](https://iiif.juncture-digital.org/gh:kent-map/images/maps/Dickens_Rochester_Chatham/manifest.json)
@@ -69,7 +69,7 @@
 
 ## Dickens Rochester Chatham with legend
 
-.ve-map 51.16,0.89 9.4  class=sticky
+.ve-map 51.16,0.89 9.4 8d73d175d66162c5 class=sticky
 
 - Allmaps ID: `8d73d175d66162c5`
 - Manifest: [https://iiif.juncture-digital.org/gh:kent-map/images/maps/Dickens_Rochester_Chatham_with_legend/manifest.json](https://iiif.juncture-digital.org/gh:kent-map/images/maps/Dickens_Rochester_Chatham_with_legend/manifest.json)
@@ -82,7 +82,7 @@
 
 ## Kent Ordnance Survey 1863
 
-.ve-map 51.16,0.89 9.4  class=sticky
+.ve-map 51.16,0.89 9.4 d8938ce88f3b83e4 class=sticky
 
 - Allmaps ID: `d8938ce88f3b83e4`
 - Manifest: [https://iiif.juncture-digital.org/gh:kent-map/images/maps/Kent_Ordnance_Survey_1863/manifest.json](https://iiif.juncture-digital.org/gh:kent-map/images/maps/Kent_Ordnance_Survey_1863/manifest.json)
@@ -95,7 +95,7 @@
 
 ## Maidstone
 
-.ve-map 51.16,0.89 9.4  class=sticky
+.ve-map 51.16,0.89 9.4 b2110ae26f0aafa7 class=sticky
 
 - Allmaps ID: `b2110ae26f0aafa7`
 - Manifest: [https://iiif.juncture-digital.org/gh:kent-map/images/maps/Maidstone/manifest.json](https://iiif.juncture-digital.org/gh:kent-map/images/maps/Maidstone/manifest.json)
@@ -108,7 +108,7 @@
 
 ## Map of British Isles (1862)
 
-.ve-map 51.16,0.89 9.4  class=sticky
+.ve-map 51.16,0.89 9.4 b2110ae26f0aafa7 class=sticky
 
 - Allmaps ID: `f5a832fdc80c33c4`
 - Manifest: [https://iiif.juncture-digital.org/gh:kent-map/images/maps/Map_of_British_Isles_(1862)/manifest.json](https://iiif.juncture-digital.org/gh:kent-map/images/maps/Map_of_British_Isles_(1862)/manifest.json)
@@ -121,7 +121,7 @@
 
 ## Rochester Ordnance Survey 1968
 
-.ve-map 51.16,0.89 9.4  class=sticky
+.ve-map 51.16,0.89 9.4 d440d662a243988c class=sticky
 
 - Allmaps ID: `d440d662a243988c`
 - Manifest: [https://iiif.juncture-digital.org/gh:kent-map/images/maps/Rochester_Ordnance_Survey_1968/manifest.json](https://iiif.juncture-digital.org/gh:kent-map/images/maps/Rochester_Ordnance_Survey_1968/manifest.json)
@@ -134,7 +134,7 @@
 
 ## The watering places of Kent
 
-.ve-map 51.16,0.89 9.4  class=sticky
+.ve-map 51.16,0.89 9.4 4463b525a11748ae class=sticky
 
 - Allmaps ID: `4463b525a11748ae`
 - Manifest: [https://iiif.juncture-digital.org/gh:kent-map/images/maps/The_watering_places_of_Kent/manifest.json](https://iiif.juncture-digital.org/gh:kent-map/images/maps/The_watering_places_of_Kent/manifest.json)
