@@ -136,11 +136,11 @@
 
 .ve-map 51.16,0.89 9.4  class=sticky
 
-- Allmaps ID: ``
+- Allmaps ID: `4463b525a11748ae`
 - Manifest: [https://iiif.juncture-digital.org/gh:kent-map/images/maps/The_watering_places_of_Kent/manifest.json](https://iiif.juncture-digital.org/gh:kent-map/images/maps/The_watering_places_of_Kent/manifest.json)
 - Manifest (v2): [https://iiif.juncture-digital.org/iiif/2/gh:kent-map/images/maps/The_watering_places_of_Kent/manifest.json](https://iiif.juncture-digital.org/iiif/2/gh:kent-map/images/maps/The_watering_places_of_Kent/manifest.json)
 
 ```html
 <param ve-map center="51.16,0.89" zoom="10">
-<param ve-map-layer active allmaps allmaps-id="" title="The watering places of Kent">
+<param ve-map-layer active allmaps allmaps-id="4463b525a11748ae" title="The watering places of Kent">
 ```
