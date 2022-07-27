@@ -110,13 +110,13 @@
 
 .ve-map 51.16,0.89 9.4  class=sticky
 
-- Allmaps ID: ``
+- Allmaps ID: `f5a832fdc80c33c4`
 - Manifest: [https://iiif.juncture-digital.org/gh:kent-map/images/maps/Map_of_British_Isles_(1862)/manifest.json](https://iiif.juncture-digital.org/gh:kent-map/images/maps/Map_of_British_Isles_(1862)/manifest.json)
 - Manifest (v2): [https://iiif.juncture-digital.org/iiif/2/gh:kent-map/images/maps/Map_of_British_Isles_(1862)/manifest.json](https://iiif.juncture-digital.org/iiif/2/gh:kent-map/images/maps/Map_of_British_Isles_(1862)/manifest.json)
 
 ```html
 <param ve-map center="51.16,0.89" zoom="10">
-<param ve-map-layer active allmaps allmaps-id="" title="Map of British Isles (1862)">
+<param ve-map-layer active allmaps allmaps-id="f5a832fdc80c33c4" title="Map of British Isles (1862)">
 ```
 
 ## Rochester Ordnance Survey 1968
