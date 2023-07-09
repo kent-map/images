@@ -1,9 +1,10 @@
 allmapsID: 
 location: 
 zoom: 10
-source: Moule 1850
+orientation: 1
+source: Moule_1850.jpg
 created: '2020-07-15T09:11:48.000Z'
 updated:
 navDate: 1850
 orientation: 1
-dimensions:
+dimensions: 4,212 x 3,204
