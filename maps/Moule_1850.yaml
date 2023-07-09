@@ -1,4 +1,4 @@
-allmapsID: 
+allmapsId: 43dfb17f8135937e
 location: 
 zoom: 10
 orientation: 1
@@ -8,3 +8,7 @@ updated:
 navDate: 1850
 orientation: 1
 dimensions: 4,212 x 3,204
+summary: From Moule's English Counties 1830 - 50, engraved by I Dower.
+RequiredStatement:
+  label: attribution
+  value: 
